@@ -1,0 +1,7 @@
+*.class
+*.jar
+/WEB-INF/lib/servlet-api.jar
+target/
+.classpath
+.project
+.settings/
