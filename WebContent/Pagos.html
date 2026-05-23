@@ -1,22 +1,49 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Brocash</title>
-    <link rel="stylesheet" href="Style.css">
-
+<doctype html>
+    <head>
+  <meta charset="UTF-8">
+  <title> pagosBrocash</title>
+  <link rel="stylesheet" href="Style.css">
     </head>
+    <h2>Realizar pago</h2>
     <body>
         <header class="header">
     <div class="encabezado">
-    <img src="Logos/Logo.png" class="logo"> 
-        <h1>¿Olvidaste tu contraseña?</h1>
-            <div class="container">
-                <form class="form-card">
-<P> Ingresa tu información para recuperar tu contraseña. </P>
-    <form> <input type="ID" name="Cedula" required placeholder="Cedula">                
-        <input type="email" name="email" required placeholder="Email">
-            <input type="checkbox" name="recuperar contraseña"> Enviar correo de recuperación
-                <input type="submit" value="Enviar">
-                    <div class="links">
-                <a href="Pagina_Principal.html">Pagina Principal</a>
-                </form>
+        <img src="Logos/Logo.png" class="logo">
+    </div>
+</header>
+
+        <div class="container">
+    <form class="form-card">
+        <!-- Campo para el nombre -->
+        <label for="ID:">ID:</label>
+        <input type="number" id="ID" required><br><br>
+        <label for="credito">Numero de Credito:</label>
+        <input type="number" id="credito" required><br><br>
+
+        <!-- Campo para el monto -->
+        <label for="monto">Monto a pagar:</label>
+        <input type="number" id="monto" required><br><br>
+
+        <!-- Método de pago -->
+        <label for="metodo">Método de pago:</label><br>
+        <select id="metodo">
+            <option value="">Seleccione</option>
+            <option value="PSE">PSE</option>
+            <option value="Nequi">Nequi</option>
+            <option value="Daviplata">Daviplata</option>
+            <option value="Tarjeta de credito">Tarjeta de crédito</option>
+            <option value="Tarjeta de debito">Tarjeta de débito</option>
+            </select><br><br>
+
+        <!-- Botón -->
+        <button type="submit">Pagar</button>
+
+    </form>
+
+    <!-- Mensaje de respuesta -->
+    <h3 id="respuesta"></h3>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
