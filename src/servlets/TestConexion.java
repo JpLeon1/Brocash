@@ -1,4 +1,4 @@
-package conexion;
+package servlets;
 
 public class TestConexion {
 
