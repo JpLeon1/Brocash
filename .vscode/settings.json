@@ -12,8 +12,8 @@
             "port": 3306,
             "driver": "MySQL",
             "name": "DataBaseBrocash",
-            "username": "Jpleon",
-            "database": "Base de Datos "
+            "username": "root",
+            "database": "Brocash"
         }
     ]
 }
