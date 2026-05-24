@@ -1,23 +1,51 @@
 package servlets;
 
-public class RegistroServlet {
+import java.io.IOException;
 
-    protected void procesarRegistro(javax.servlet.http.HttpServletRequest request) {
-    Usuario usuario = new Usuario();
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
-    usuario.setIdUsuario(
-        Integer.parseInt(request.getParameter("idUsuario")));
+@WebServlet("/RegistroServlet")
 
-    usuario.setNombre(request.getParameter("nombre"));
+public class RegistroServlet extends HttpServlet {
 
-    usuario.setApellido(request.getParameter("apellido"));
+    private static final long serialVersionUID = 1L;
 
-    usuario.setEdad(
-        Integer.parseInt(request.getParameter("edad")));
+    protected void doPost(
+            HttpServletRequest request,
+            HttpServletResponse response)
 
-    usuario.setEmail(request.getParameter("email"));
+            throws ServletException, IOException {
 
-    usuario.setTelefono(request.getParameter("telefono"));
-}
+        Usuario usuario = new Usuario();
 
+        usuario.setIdUsuario(
+            Integer.parseInt(
+                request.getParameter("idUsuario")));
+
+        usuario.setNombre(
+            request.getParameter("nombre"));
+
+        usuario.setApellido(
+            request.getParameter("apellido"));
+
+        usuario.setEdad(
+            Integer.parseInt(
+                request.getParameter("edad")));
+
+        usuario.setEmail(
+            request.getParameter("email"));
+
+        usuario.setTelefono(
+            request.getParameter("telefono"));
+
+        UsuarioDAO dao = new UsuarioDAO();
+
+        dao.registrarUsuario(usuario);
+
+        response.sendRedirect("principal.jsp");
+    }
 }

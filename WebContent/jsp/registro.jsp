@@ -1,0 +1,68 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Registro Usuario</title>
+<link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="encabezado">
+        <img src="Logos/Logo.png" class="logo">
+        <h1>Registro de usuario</h1>
+    </div>
+</header>
+
+<h3>Complete los siguientes campos:</h3>
+
+<div class="container">
+
+<form class="form-card"
+    action="RegistroServlet"
+        method="post">
+
+    <label>Nombre</label>
+    <input type="text"
+    name="nombre"
+        required>
+
+    <label>Apellido</label>
+    <input type="text"
+    name="apellido"
+        required>
+
+    <label>Cédula</label>
+    <input type="number"
+    name="idUsuario"
+        required>
+
+    <label>Edad</label>
+    <input type="number"
+    name="edad"
+        required>
+
+    <label>Correo electrónico</label>
+    <input type="email"
+    name="email"
+        required>
+
+    <label>Teléfono</label>
+    <input type="text"
+    name="telefono"
+        required>
+
+    <button type="submit">
+        Registrarme
+    </button>
+
+</form>
+
+</div>
+
+</body>
+</html>
