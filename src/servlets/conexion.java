@@ -26,11 +26,12 @@ public class Conexion {
                     PASSWORD
             );
 
-            System.out.println("Conexion exitosa");
+            System.out.println("Conexion exitosa a MySQL");
 
         } catch (Exception e) {
 
             System.out.println("Error de conexion");
+
             e.printStackTrace();
         }
 
