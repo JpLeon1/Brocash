@@ -1,4 +1,4 @@
-package servlets;
+package javax.servlet.servlets;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

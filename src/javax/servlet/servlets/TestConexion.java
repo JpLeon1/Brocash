@@ -1,4 +1,4 @@
-package servlets;
+package javax.servlet.servlets;
 
 public class TestConexion {
 
