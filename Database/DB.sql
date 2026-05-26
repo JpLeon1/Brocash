@@ -1,8 +1,7 @@
 DROP DATABASE IF EXISTS brocash;
 CREATE DATABASE brocash;
 USE brocash;
-
--- 1. Tabla modificada para coordinar con Eclipse (nombre en minúsculas y con CONTRASENA)
+ 
 CREATE TABLE usuarios (
     ID_USUARIO INT PRIMARY KEY,
     NOMBRE VARCHAR(30),
@@ -10,7 +9,7 @@ CREATE TABLE usuarios (
     EDAD INT,
     EMAIL VARCHAR(255),
     TELEFONO VARCHAR(15),
-    CONTRASENA VARCHAR(50) -- <-- Nueva columna añadida
+    CONTRASENA VARCHAR(50)
 );
 
 CREATE TABLE ANALISTA (
